@@ -33,12 +33,12 @@ include("process.php");
                                     if (mysqli_num_rows($airlineNameResults) > 0) {
                                         while ($airlineNameRow = mysqli_fetch_assoc($airlineNameResults)) {
                                             ?>
-                                            <option <?php if ($airlineFilter == $airlineNameRow['airlineName']) {
-                                                echo "selected";
-                                            } ?> value="<?php echo $airlineNameRow['airlineName'] ?>">
-                                                <?php echo $airlineNameRow['airlineName'] ?>
-                                            </option>
-                                            <?php
+                                                    <option <?php if ($airlineFilter == $airlineNameRow['airlineName']) {
+                                                        echo "selected";
+                                                    } ?> value="<?php echo $airlineNameRow['airlineName'] ?>">
+                                                        <?php echo $airlineNameRow['airlineName'] ?>
+                                                    </option>
+                                                    <?php
                                         }
                                     }
                                     ?>
@@ -54,12 +54,12 @@ include("process.php");
                                     if (mysqli_num_rows($departureCodeResults) > 0) {
                                         while ($departureRow = mysqli_fetch_assoc($departureCodeResults)) {
                                             ?>
-                                            <option <?php if ($departureFilter == $departureRow['departureAirportCode']) {
-                                                echo "selected";
-                                            } ?> value="<?php echo $departureRow['departureAirportCode'] ?>">
-                                                <?php echo $departureRow['departureAirportCode'] ?>
-                                            </option>
-                                            <?php
+                                                    <option <?php if ($departureFilter == $departureRow['departureAirportCode']) {
+                                                        echo "selected";
+                                                    } ?> value="<?php echo $departureRow['departureAirportCode'] ?>">
+                                                        <?php echo $departureRow['departureAirportCode'] ?>
+                                                    </option>
+                                                    <?php
                                         }
                                     }
                                     ?>
@@ -127,17 +127,17 @@ include("process.php");
                                 if (mysqli_num_rows($flightResults) > 0) {
                                     while ($flightRow = mysqli_fetch_assoc($flightResults)) {
                                         ?>
-                                        <tr>
-                                            <th scope="row"><?php echo $flightRow['flightNumber'] ?></th>
-                                            <td><?php echo $flightRow['airlineName'] ?></td>
-                                            <td><?php echo $flightRow['departureAirportCode'] ?></td>
-                                            <td><?php echo $flightRow['arrivalAirportCode'] ?></td>
-                                            <td><?php echo $flightRow['departureDatetime'] ?></td>
-                                            <td><?php echo $flightRow['arrivalDatetime'] ?></td>
-                                            <td><?php echo $flightRow['flightDurationMinutes'] ?></td>
-                                            <td><?php echo $flightRow['aircraftType'] ?></td>
-                                        </tr>
-                                        <?php
+                                                <tr>
+                                                    <th scope="row"><?php echo $flightRow['flightNumber'] ?></th>
+                                                    <td><?php echo $flightRow['airlineName'] ?></td>
+                                                    <td><?php echo $flightRow['departureAirportCode'] ?></td>
+                                                    <td><?php echo $flightRow['arrivalAirportCode'] ?></td>
+                                                    <td><?php echo $flightRow['departureDatetime'] ?></td>
+                                                    <td><?php echo $flightRow['arrivalDatetime'] ?></td>
+                                                    <td><?php echo $flightRow['flightDurationMinutes'] ?></td>
+                                                    <td><?php echo $flightRow['aircraftType'] ?></td>
+                                                </tr>
+                                                <?php
                                     }
                                 }
                                 ?>
