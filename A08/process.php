@@ -28,4 +28,3 @@ $airlineNameResults = executeQuery($airlineNameQuery);
 $departureCodeQuery = "SELECT DISTINCT(departureAirportCode) FROM flightlogs";
 $departureCodeResults = executeQuery($departureCodeQuery);
 ?>
-process.php
